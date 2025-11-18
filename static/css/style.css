@@ -1,0 +1,195 @@
+/*Poseify-inspired Dark + Neon Pink theme
+:root{
+  --bg1:#070708; --bg2:#0f0f11;
+  --panel:#111216;
+  --pink:#ff007f;
+  --cyan:#00eaff;
+  --muted:#9aa3a6;
+}
+
+body.pose-body{background: linear-gradient(180deg,var(--bg1),var(--bg2)); color:#e9eef0; margin:0; font-family: "Inter", "Segoe UI", Arial, sans-serif;}
+.pose-navbar{display:flex;justify-content:space-between;align-items:center;padding:14px 28px;background:linear-gradient(90deg,#0b0b0c,#0f0620);border-bottom:1px solid rgba(255,0,127,0.06)}
+.pose-navbar .logo{height:40px;margin-right:12px}
+.pose-navbar .brand-title{font-weight:700;color:var(--pink);font-size:1.15rem}
+.pose-navbar a{color:#d7dde0;margin-left:18px;text-decoration:none;font-weight:600}
+.pose-navbar a:hover{color:var(--pink); text-decoration:underline}
+.pose-main{padding:32px 48px}
+.page-title{font-size:1.6rem;color:var(--pink);margin-bottom:6px}
+.lead.muted{color:var(--muted);margin-bottom:0}
+.card.panel{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:12px;border:1px solid rgba(255,0,127,0.06); padding:18px;box-shadow:0 10px 30px rgba(255,0,127,0.03)}
+.chip{display:inline-block;padding:8px 12px;border-radius:18px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.02);margin-left:8px}
+.btn-pink{background:linear-gradient(90deg,var(--pink),#ff66a3);color:#fff;border:none;padding:8px 14px;border-radius:8px}
+.btn-cta{background:linear-gradient(90deg,var(--pink),#ff66a3);color:white;padding:12px 22px;border-radius:10px;text-decoration:none;display:inline-block}
+.table-dark td, .table-dark th{border-color:rgba(255,255,255,0.03)}
+.muted{color:var(--muted)}
+.hero{padding:48px 0}
+.hero-inner{display:flex;align-items:center;justify-content:space-between}
+.hero-text h1{font-size:2.6rem;color:var(--pink);margin:0}
+.hero-text p{color:var(--muted);margin:12px 0}
+@media (max-width:900px){
+  .pose-navbar{padding:12px}
+  .pose-main{padding:18px}
+  .hero-inner{flex-direction:column;gap:20px}
+}  */:root {
+  --bg1:#021028;          /* main background */
+  --bg2:#051630;          /* gradient bottom */
+  --panel:#0a1b3a;        /* deeper card panels for better contrast */
+  --accent:#00eaff;       /* cyan */
+  --accent2:#0077ff;      /* deep blue */
+  --muted:#b7d0e0;        /* softer but brighter text */
+  --text:#f4fbff;         /* main text brighter */
+}
+
+body.pose-body {
+  background: linear-gradient(180deg,var(--bg1),var(--bg2));
+  color: var(--text);
+  margin: 0;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+/* ---------------- Navbar ---------------- */
+.pose-navbar {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 28px;
+  background: linear-gradient(90deg, var(--accent2), var(--accent));
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.pose-navbar .logo {
+  height: 70px;
+  width: auto;
+  margin-right: 18px;
+}
+
+.pose-navbar a {
+  color:#e2f5ff;
+  margin-left:20px;
+  text-decoration:none;
+  font-weight:600;
+  letter-spacing: 0.4px;
+  transition: color 0.2s, transform 0.2s;
+}
+.pose-navbar a:hover {
+  color:#fff;
+  transform: translateY(-1px);
+  text-shadow: 0 0 10px var(--accent);
+}
+
+/* ---------------- Main & Cards ---------------- */
+.pose-main {
+  padding:40px 60px;
+}
+
+.page-title {
+  font-size:1.8rem;
+  color:var(--accent);
+  margin-bottom:8px;
+}
+
+.lead.muted {
+  color:var(--muted);
+  font-size: 1.05rem;
+}
+
+.card.panel {
+  background: linear-gradient(180deg, rgba(10,20,50,0.9), rgba(10,25,60,0.85));
+  border-radius:14px;
+  border:1px solid rgba(0,138,255,0.12);
+  padding:20px;
+  box-shadow: 0 6px 18px rgba(0,122,255,0.12);
+  transition: all 0.3s ease;
+  color: var(--text);
+}
+.card.panel:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px rgba(0,234,255,0.25);
+}
+
+.card.panel h4 {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.card.panel p {
+  color: #cce7f5;
+  line-height: 1.6;
+}
+
+/* ---------------- Buttons ---------------- */
+.btn-cta {
+  background: linear-gradient(90deg,var(--accent),var(--accent2));
+  color:#fff;
+  padding:14px 26px;
+  border:none;
+  border-radius:10px;
+  text-decoration:none;
+  display:inline-block;
+  font-weight:600;
+  box-shadow: 0 0 20px rgba(0,234,255,0.25);
+  transition: all 0.3s ease;
+}
+.btn-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 30px rgba(0,234,255,0.4);
+}
+
+/* ---------------- Hero Section ---------------- */
+.hero {
+  padding: 60px 0;
+}
+.hero-inner {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 30px;
+}
+.hero-text h1 {
+  font-size:2.8rem;
+  color:var(--accent);
+  margin:0;
+  text-shadow: 0 0 18px rgba(0,234,255,0.3);
+}
+.hero-text p {
+  color:#c8e4f7;
+  margin:16px 0;
+  max-width: 520px;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+/* ---------------- Stats Section ---------------- */
+.stat-card {
+  width: 230px;
+  background: var(--panel);
+  color: var(--text);
+  border-radius: 12px;
+  padding: 18px;
+  transition: all 0.3s ease;
+}
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(0, 234, 255, 0.25);
+}
+.stat-card h4 {
+  color: var(--accent);
+  font-size: 1.8rem;
+  margin: 10px 0;
+}
+.stat-card p {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* ---------------- Animations ---------------- */
+.fade-in { animation: fadeIn 1.2s ease forwards; opacity: 0; }
+.fade-up { animation: fadeUp 1.2s ease forwards; opacity: 0; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(20px);} to { opacity: 1; transform: translateY(0);} }
+
+/* Responsive */
+@media (max-width:900px) {
+  .hero-inner { flex-direction: column; text-align:center; }
+  .pose-main { padding: 20px; }
+}

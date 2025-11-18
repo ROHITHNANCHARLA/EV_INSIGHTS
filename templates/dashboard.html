@@ -1,0 +1,134 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="container-fluid">
+  <div class="row align-items-center mb-3">
+    <div class="col-md-8">
+      <h2 class="page-title">⚡ EV Sales Dashboard</h2>
+      <p class="lead muted">A complete visualization of India’s Electric Vehicle adoption journey.</p>
+    </div>
+    <div class="col-md-4 text-end">
+      <div class="chip">Total Units: <strong id="k_total">-</strong></div>
+      <div class="chip">Top State: <strong id="k_state">-</strong></div>
+    </div>
+  </div>
+
+  <!-- 🔹 First Row -->
+  <div class="row g-3">
+    <div class="col-lg-8">
+      <div class="card panel">
+        <h5>📈 Yearly EV Sales Trend</h5>
+        <div id="chart_year" style="height:360px;"></div>
+      </div>
+    </div>
+
+    <div class="col-lg-4">
+      <div class="card panel">
+        <h5>🏙️ Top 10 States by Sales</h5>
+        <div id="chart_state" style="height:360px;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🔹 Second Row -->
+  <div class="row g-3 mt-2">
+    <div class="col-lg-4">
+      <div class="card panel">
+        <h5>🚗 Vehicle Type Distribution</h5>
+        <div id="chart_type" style="height:300px;"></div>
+      </div>
+    </div>
+
+    <div class="col-lg-4">
+      <div class="card panel">
+        <h5>📅 Monthly Sales Trend</h5>
+        <div id="chart_month" style="height:300px;"></div>
+      </div>
+    </div>
+
+    <div class="col-lg-4">
+      <div class="card panel">
+        <h5>🧭 Category vs Quantity</h5>
+        <div id="chart_category" style="height:300px;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+fetch('/api/summary').then(r=>r.json()).then(data=>{
+  const total = data.by_year.reduce((s,d)=>s + (+d.EV_Sales_Quantity),0);
+  document.getElementById('k_total').innerText = total.toLocaleString();
+  document.getElementById('k_state').innerText = data.by_state.length ? data.by_state[0].State : 'N/A';
+
+  // 🌈 Yearly EV Sales Trend (Smooth Area)
+  Plotly.newPlot('chart_year', [{
+    x: data.by_year.map(d=>d.Year),
+    y: data.by_year.map(d=>d.EV_Sales_Quantity),
+    type:'scatter', mode:'lines+markers',
+    fill:'tozeroy', line:{color:'#00eaff',width:3},
+    marker:{color:'#0077ff',size:8},
+  }], {
+    margin:{t:20}, paper_bgcolor:'transparent', plot_bgcolor:'transparent',
+    font:{color:'#eaf6ff'}
+  });
+
+  // 🏙️ Top 10 States by EV Sales
+  const states = data.by_state.slice(0,10);
+  Plotly.newPlot('chart_state', [{
+    x: states.map(d=>d.EV_Sales_Quantity),
+    y: states.map(d=>d.State),
+    orientation:'h', type:'bar',
+    marker:{color:'#0099ff'}
+  }], {
+    margin:{l:100,t:20}, paper_bgcolor:'transparent', plot_bgcolor:'transparent',
+    font:{color:'#eaf6ff'}
+  });
+
+  // 🚗 Vehicle Type Distribution (Donut)
+  Plotly.newPlot('chart_type', [{
+    labels: data.by_type.map(d=>d.Vehicle_Type),
+    values: data.by_type.map(d=>d.EV_Sales_Quantity),
+    type:'pie', hole:0.45,
+    marker:{colors:['#00eaff','#0077ff','#0047b3','#33ccff']}
+  }], {
+    margin:{t:20}, paper_bgcolor:'transparent', font:{color:'#eaf6ff'}
+  });
+
+  // 📅 Monthly Trend (Bar + Line)
+  Plotly.newPlot('chart_month', [
+    {
+      x: data.by_month.map(d=>d.Month_Name),
+      y: data.by_month.map(d=>d.EV_Sales_Quantity),
+      type:'bar',
+      marker:{color:'#00bfff'},
+      name:'Monthly Sales'
+    },
+    {
+      x: data.by_month.map(d=>d.Month_Name),
+      y: data.by_month.map(d=>d.EV_Sales_Quantity),
+      type:'scatter', mode:'lines+markers',
+      line:{color:'#0077ff',width:3},
+      name:'Trend'
+    }
+  ], {
+    barmode:'overlay', margin:{t:20}, paper_bgcolor:'transparent', plot_bgcolor:'transparent',
+    font:{color:'#eaf6ff'}
+  });
+
+  // 🧭 Vehicle Category vs Quantity (Bubble Chart)
+  Plotly.newPlot('chart_category', [{
+    x: data.by_category.map(d=>d.Vehicle_Category),
+    y: data.by_category.map(d=>d.EV_Sales_Quantity),
+    text: data.by_category.map(d=>d.Vehicle_Class),
+    mode:'markers',
+    marker:{
+      size: data.by_category.map(d=>Math.sqrt(d.EV_Sales_Quantity)),
+      color:'#00eaff', opacity:0.7, line:{color:'#0077ff',width:2}
+    }
+  }], {
+    margin:{t:20}, paper_bgcolor:'transparent', plot_bgcolor:'transparent',
+    font:{color:'#eaf6ff'}
+  });
+});
+</script>
+{% endblock %}

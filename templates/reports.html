@@ -1,0 +1,100 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<div class="container-fluid">
+  <h2 class="page-title mb-3">📄 Reports & Exports</h2>
+  <p class="lead muted">Generate detailed EV sales summaries, top performers, and download them for analysis.</p>
+
+  <!-- 🔹 Report Filters -->
+  <div class="card panel p-4 mb-4">
+    <form id="reportForm" class="row g-3 align-items-end">
+      <div class="col-md-3">
+        <label class="form-label">Select Year</label>
+        <select id="r_year" class="form-select">
+          <option value="">All Years</option>
+          {% for y in years %}
+          <option>{{ y }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="col-md-3">
+        <label class="form-label">Select State</label>
+        <select id="r_state" class="form-select">
+          <option value="">All States</option>
+          {% for s in states %}
+          <option>{{ s }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="col-md-3">
+        <label class="form-label">Select Format</label>
+        <select id="r_format" class="form-select">
+          <option value="csv">CSV</option>
+          <option value="xlsx">Excel</option>
+          <option value="pdf">PDF</option>
+        </select>
+      </div>
+      <div class="col-md-3 text-end">
+        <button id="generate" class="btn btn-cta w-100">📤 Generate Report</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- 🔹 Summary KPIs -->
+  <div id="report_kpis" class="row text-center mb-4 fade-in"></div>
+
+  <!-- 🔹 Summary Table -->
+  <div class="card panel p-3 fade-up">
+    <h5 class="accent mb-3">📊 EV Sales Summary</h5>
+    <div id="report_table" class="table-responsive"></div>
+  </div>
+</div>
+
+<script>
+document.getElementById('generate').addEventListener('click', async (e)=>{
+  e.preventDefault();
+
+  const payload = {
+    year: document.getElementById('r_year').value,
+    state: document.getElementById('r_state').value,
+    format: document.getElementById('r_format').value
+  };
+
+  // Fetch the summary data
+  const res = await fetch('/api/report', {
+    method: 'POST',
+    headers: {'Content-Type':'application/json'},
+    body: JSON.stringify(payload)
+  });
+  const data = await res.json();
+
+  // --- KPIs ---
+  document.getElementById('report_kpis').innerHTML = `
+    <div class="col-md-3"><div class="chip">Total Units: <b>${data.kpi.total_units.toLocaleString()}</b></div></div>
+    <div class="col-md-3"><div class="chip">Top State: <b>${data.kpi.top_state}</b></div></div>
+    <div class="col-md-3"><div class="chip">Top Manufacturer: <b>${data.kpi.top_manufacturer}</b></div></div>
+    <div class="col-md-3"><div class="chip">Rows: <b>${data.kpi.rows}</b></div></div>
+  `;
+
+  // --- Table ---
+  let html = '<table class="table table-dark table-striped"><thead><tr><th>Year</th><th>State</th><th>Manufacturer</th><th>Vehicle Type</th><th>Units</th></tr></thead><tbody>';
+  data.table.forEach(r=>{
+    html += `<tr>
+      <td>${r.Year}</td>
+      <td>${r.State}</td>
+      <td>${r.Manufacturer}</td>
+      <td>${r.Vehicle_Type}</td>
+      <td>${r.EV_Sales_Quantity.toLocaleString()}</td>
+    </tr>`;
+  });
+  html += '</tbody></table>';
+  document.getElementById('report_table').innerHTML = html;
+
+  // Optional: trigger file download
+  if (payload.format !== 'view') {
+    window.open(`/download_report?format=${payload.format}&year=${payload.year}&state=${payload.state}`, '_blank');
+  }
+});
+</script>
+
+{% endblock %}

@@ -1,0 +1,97 @@
+Year,Month_Name,State,Manufacturer,Model,Vehicle_Class,Vehicle_Category,Vehicle_Type,Charging_Type,Battery_Capacity_kWh,Range_km,Price_Lakh,Fuel_Type,EV_Sales_Quantity
+2018,January,Maharashtra,Tata,Tigor EV,Commercial,Car,4W,Fast,16,120,10.2,Electric,320
+2018,February,Delhi,Hero Electric,Optima HX,Personal,Scooter,2W,Standard,1.5,80,0.9,Electric,950
+2018,March,Karnataka,MAHINDRA,eVerito,Commercial,Car,4W,Fast,18,140,9.6,Electric,420
+2018,April,Tamil Nadu,Ather,450X,Personal,Scooter,2W,Fast,2.9,116,1.5,Electric,700
+2018,May,Gujarat,Hero Electric,Photon,Personal,Scooter,2W,Standard,2,85,1.2,Electric,600
+2018,June,Kerala,MG,ZS EV,Personal,Car,4W,Fast,44,340,23.7,Electric,150
+2018,July,Uttar Pradesh,Ola Electric,S1 Pro,Personal,Scooter,2W,Fast,3.9,181,1.4,Electric,280
+2018,August,Delhi,Tata,Nexon EV,Personal,Car,4W,Fast,30,312,15,Electric,200
+2018,September,Maharashtra,Ather,450S,Personal,Scooter,2W,Standard,3.3,110,1.2,Electric,500
+2018,October,Karnataka,Hyundai,Kona Electric,Personal,Car,4W,Fast,39,450,25.3,Electric,130
+2018,November,Tamil Nadu,BYD,E6,Commercial,Car,4W,Fast,71,520,29,Electric,100
+2018,December,Gujarat,Hero Electric,NYX HX,Commercial,Scooter,2W,Standard,1.8,82,1.1,Electric,420
+2019,January,Maharashtra,Tata,Tigor EV,Commercial,Car,4W,Fast,21,140,10.8,Electric,450
+2019,February,Delhi,Hero Electric,Optima HX,Personal,Scooter,2W,Standard,1.5,85,0.9,Electric,1100
+2019,March,Karnataka,Ather,450X,Personal,Scooter,2W,Fast,3,116,1.6,Electric,900
+2019,April,Tamil Nadu,MG,ZS EV,Personal,Car,4W,Fast,44,350,23.7,Electric,250
+2019,May,Gujarat,Hero Electric,Photon,Personal,Scooter,2W,Standard,2,85,1.2,Electric,800
+2019,June,Kerala,Tata,Nexon EV,Personal,Car,4W,Fast,30,312,14.5,Electric,350
+2019,July,Uttar Pradesh,Ola Electric,S1 Pro,Personal,Scooter,2W,Fast,4,181,1.4,Electric,450
+2019,August,Delhi,MG,ZS EV,Personal,Car,4W,Fast,44,350,23.7,Electric,270
+2019,September,Maharashtra,Ather,450S,Personal,Scooter,2W,Standard,3.3,110,1.2,Electric,600
+2019,October,Karnataka,Hyundai,Kona Electric,Personal,Car,4W,Fast,39,450,25.3,Electric,200
+2019,November,Tamil Nadu,BYD,E6,Commercial,Car,4W,Fast,71,520,29,Electric,150
+2019,December,Gujarat,Hero Electric,NYX HX,Commercial,Scooter,2W,Standard,2,82,1.1,Electric,500
+2020,January,Maharashtra,Tata,Nexon EV,Personal,Car,4W,Fast,30,312,14.8,Electric,500
+2020,February,Delhi,Hero Electric,Optima HX,Personal,Scooter,2W,Standard,1.5,85,0.9,Electric,1300
+2020,March,Karnataka,Ather,450X,Personal,Scooter,2W,Fast,3.7,116,1.7,Electric,1000
+2020,April,Tamil Nadu,MG,ZS EV,Personal,Car,4W,Fast,44,350,23.7,Electric,300
+2020,May,Gujarat,Hero Electric,Photon,Personal,Scooter,2W,Standard,2,85,1.2,Electric,850
+2020,June,Kerala,Tata,Tigor EV,Commercial,Car,4W,Fast,21,140,10.8,Electric,420
+2020,July,Uttar Pradesh,Ola Electric,S1 Pro,Personal,Scooter,2W,Fast,4,181,1.4,Electric,700
+2020,August,Delhi,MG,ZS EV,Personal,Car,4W,Fast,44,350,23.7,Electric,300
+2020,September,Maharashtra,Ather,450S,Personal,Scooter,2W,Standard,3.3,110,1.2,Electric,700
+2020,October,Karnataka,Hyundai,Kona Electric,Personal,Car,4W,Fast,39,450,25.3,Electric,250
+2020,November,Tamil Nadu,BYD,E6,Commercial,Car,4W,Fast,71,520,29,Electric,200
+2020,December,Gujarat,Hero Electric,NYX HX,Commercial,Scooter,2W,Standard,2,82,1.1,Electric,580
+2021,January,Maharashtra,Tata,Nexon EV,Personal,Car,4W,Fast,30,312,14.8,Electric,800
+2021,February,Delhi,Hero Electric,Optima HX,Personal,Scooter,2W,Standard,1.5,85,0.9,Electric,1600
+2021,March,Karnataka,Ather,450X,Personal,Scooter,2W,Fast,3.7,116,1.7,Electric,1200
+2021,April,Tamil Nadu,MG,ZS EV,Personal,Car,4W,Fast,44,350,23.7,Electric,450
+2021,May,Gujarat,Hero Electric,Photon,Personal,Scooter,2W,Standard,2,85,1.2,Electric,950
+2021,June,Kerala,Tata,Tigor EV,Commercial,Car,4W,Fast,21,140,10.8,Electric,520
+2021,July,Uttar Pradesh,Ola Electric,S1 Pro,Personal,Scooter,2W,Fast,4,181,1.4,Electric,900
+2021,August,Delhi,MG,ZS EV,Personal,Car,4W,Fast,44,350,23.7,Electric,400
+2021,September,Maharashtra,Ather,450S,Personal,Scooter,2W,Standard,3.3,110,1.2,Electric,850
+2021,October,Karnataka,Hyundai,Kona Electric,Personal,Car,4W,Fast,39,450,25.3,Electric,300
+2021,November,Tamil Nadu,BYD,E6,Commercial,Car,4W,Fast,71,520,29,Electric,250
+2021,December,Gujarat,Hero Electric,NYX HX,Commercial,Scooter,2W,Standard,2,82,1.1,Electric,680
+2022,January,Maharashtra,Tata,Tiago EV,Personal,Car,4W,Fast,24,250,8.5,Electric,1200
+2022,February,Delhi,Hero Electric,Optima HX,Personal,Scooter,2W,Standard,2,90,0.95,Electric,1800
+2022,March,Karnataka,Ather,450X Gen 3,Personal,Scooter,2W,Fast,3.9,146,1.8,Electric,1400
+2022,April,Tamil Nadu,MG,ZS EV,Personal,Car,4W,Fast,50,461,27.5,Electric,600
+2022,May,Gujarat,Hero Electric,Photon HX,Personal,Scooter,2W,Standard,2.2,95,1.25,Electric,1100
+2022,June,Kerala,Tata,Tigor EV,Commercial,Car,4W,Fast,26,200,11.2,Electric,700
+2022,July,Uttar Pradesh,Ola Electric,S1 Pro,Personal,Scooter,2W,Fast,4,195,1.5,Electric,1200
+2022,August,Delhi,MG,ZS EV,Personal,Car,4W,Fast,50,461,27.5,Electric,500
+2022,September,Maharashtra,Ather,450S,Personal,Scooter,2W,Standard,3.3,115,1.3,Electric,1000
+2022,October,Karnataka,Hyundai,Kona Electric,Personal,Car,4W,Fast,39,450,25.3,Electric,320
+2022,November,Tamil Nadu,BYD,E6,Commercial,Car,4W,Fast,71,520,29,Electric,300
+2022,December,Gujarat,Hero Electric,NYX HX,Commercial,Scooter,2W,Standard,2,82,1.1,Electric,750
+2023,January,Maharashtra,Tata,Tiago EV,Personal,Car,4W,Fast,24,250,8.5,Electric,1800
+2023,February,Delhi,Hero Electric,Optima CX,Personal,Scooter,2W,Standard,2.1,90,1,Electric,2200
+2023,March,Karnataka,Ather,450X Gen 3,Personal,Scooter,2W,Fast,3.9,146,1.8,Electric,1600
+2023,April,Tamil Nadu,MG,ZS EV,Personal,Car,4W,Fast,50,461,27.5,Electric,900
+2023,May,Gujarat,Ola Electric,S1 Pro,Personal,Scooter,2W,Fast,4,195,1.5,Electric,1800
+2023,June,Kerala,Tata,Tigor EV,Commercial,Car,4W,Fast,26,200,11.2,Electric,850
+2023,July,Uttar Pradesh,Ola Electric,S1 Air,Personal,Scooter,2W,Fast,3.5,151,1.2,Electric,2000
+2023,August,Delhi,MG,ZS EV,Personal,Car,4W,Fast,50,461,27.5,Electric,950
+2023,September,Maharashtra,Ather,450 Apex,Personal,Scooter,2W,Standard,3.7,150,1.6,Electric,1500
+2023,October,Karnataka,Hyundai,Ioniq 5,Personal,Car,4W,Fast,72.6,631,45,Electric,650
+2023,November,Tamil Nadu,BYD,Atto 3,Commercial,Car,4W,Fast,60,521,34,Electric,500
+2023,December,Gujarat,Hero Electric,NYX HX,Commercial,Scooter,2W,Standard,2,82,1.1,Electric,900
+2024,January,Maharashtra,Tata,Curvv EV,Personal,Car,4W,Fast,40,450,16,Electric,2200
+2024,February,Delhi,Ola Electric,S1 X,Personal,Scooter,2W,Fast,3.5,150,1.1,Electric,2500
+2024,March,Karnataka,Ather,450 Apex,Personal,Scooter,2W,Fast,3.7,150,1.7,Electric,1800
+2024,April,Tamil Nadu,MG,ZS EV,Personal,Car,4W,Fast,50,461,27.5,Electric,1200
+2024,May,Gujarat,Ola Electric,S1 Pro,Personal,Scooter,2W,Fast,4,195,1.5,Electric,2000
+2024,June,Kerala,Tata,Tigor EV,Commercial,Car,4W,Fast,26,200,11.2,Electric,1000
+2024,July,Uttar Pradesh,Ola Electric,S1 Air,Personal,Scooter,2W,Fast,3.5,151,1.2,Electric,2400
+2024,August,Delhi,Hyundai,Ioniq 5,Personal,Car,4W,Fast,72.6,631,45,Electric,900
+2024,September,Maharashtra,Ather,450 Apex,Personal,Scooter,2W,Fast,3.7,150,1.7,Electric,2000
+2024,October,Karnataka,Hyundai,Kona Electric,Personal,Car,4W,Fast,39,450,25.3,Electric,600
+2024,November,Tamil Nadu,BYD,Atto 3,Commercial,Car,4W,Fast,60,521,34,Electric,550
+2024,December,Gujarat,Hero Electric,NYX HX,Commercial,Scooter,2W,Standard,2,82,1.1,Electric,950
+2025,January,Maharashtra,Tata,Harrier EV,Personal,Car,4W,Fast,60,550,22,Electric,2500
+2025,February,Delhi,Ola Electric,S1 Pro,Personal,Scooter,2W,Fast,4,195,1.5,Electric,2700
+2025,March,Karnataka,Ather,450 Apex,Personal,Scooter,2W,Fast,3.7,150,1.7,Electric,2100
+2025,April,Tamil Nadu,MG,ZS EV,Personal,Car,4W,Fast,50,461,27.5,Electric,1300
+2025,May,Gujarat,Ola Electric,S1 X,Personal,Scooter,2W,Fast,3.5,150,1.1,Electric,2600
+2025,June,Kerala,Tata,Tiago EV,Personal,Car,4W,Fast,24,250,8.5,Electric,1200
+2025,July,Uttar Pradesh,Ola Electric,S1 Air,Personal,Scooter,2W,Fast,3.5,151,1.2,Electric,2500
+2025,August,Delhi,Hyundai,Ioniq 5,Personal,Car,4W,Fast,72.6,631,45,Electric,1000
+2025,September,Maharashtra,Ather,450 Apex,Personal,Scooter,2W,Fast,3.7,150,1.7,Electric,2300
+2025,October,Karnataka,Hyundai,Kona Electric,Personal,Car,4W,Fast,39,450,25.3,Electric,700
+2025,November,Tamil Nadu,BYD,Seal,Commercial,Car,4W,Fast,82,650,40,Electric,650
+2025,December,Gujarat,Hero Electric,Photon HX,Commercial,Scooter,2W,Standard,2.2,95,1.25,Electric,1000

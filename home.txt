@@ -1,0 +1,94 @@
+<!-- {% extends "layout.html" %}
+{% block body %}
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <h1>India’s Electric Future</h1>
+      <p class="muted">Interactive analytics, forecasting and reports for Electric Vehicle sales across India.</p>
+      <a class="btn-cta" href="/dashboard">Enter Dashboard</a>
+    </div>
+    <div class="hero-art">
+       #decorative SVG or image
+      <img src="{{ url_for('static', filename='img/logo.svg') }}" alt="ev art" style="width:300px;opacity:0.95;">
+    </div>
+  </div>
+</section>
+{% endblock %} -->
+
+{% extends "layout.html" %}
+{% block body %}
+
+<!-- 🌅 Hero Section -->
+<section class="hero fade-in">
+  <div class="hero-inner">
+    <div class="hero-text slide-in-left">
+      <h1>⚡ India’s Electric Future</h1>
+      <p class="muted">Discover real-time EV analytics, forecasts, and adoption trends driving India toward a sustainable tomorrow.</p>
+      <a class="btn-cta pulse" href="/dashboard">🚗 Enter Dashboard</a>
+    </div>
+
+    <div class="hero-art slide-in-right">
+      <img src="{{ url_for('static', filename='img/ev_hero.png') }}" 
+           alt="Electric Car" 
+           class="ev-hero-img">
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <span>▼ Scroll Down</span>
+  </div>
+</section>
+
+<!-- 🌍 Info Cards -->
+<section class="features fade-up">
+  <div class="row text-center">
+    <div class="col-md-4 mb-4">
+      <div class="card panel hover-glow h-100">
+        <img src="{{ url_for('static', filename='img/dashboard_icon.png') }}" width="60" alt="Dashboard">
+        <h4 class="accent mt-2">Live Dashboard</h4>
+        <p class="muted">Visualize EV sales and trends in real-time with interactive charts and key insights.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card panel hover-glow h-100">
+        <img src="{{ url_for('static', filename='img/forecast_icon.png') }}" width="60" alt="Forecast">
+        <h4 class="accent mt-2">Predictive Insights</h4>
+        <p class="muted">AI-driven forecasting models to predict future EV sales across regions and classes.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card panel hover-glow h-100">
+        <img src="{{ url_for('static', filename='img/map_icon.png') }}" width="60" alt="Map">
+        <h4 class="accent mt-2">Regional Analysis</h4>
+        <p class="muted">Compare state-wise adoption rates, charging infrastructure, and consumer growth.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ⚙️ Stats / Highlights -->
+<section class="stats text-center fade-up">
+  <h3 class="accent mb-4">⚙️ India’s EV Revolution by Numbers</h3>
+  <div class="d-flex justify-content-center flex-wrap gap-4">
+    <div class="card panel stat-card">
+      <img src="{{ url_for('static', filename='img/ev_car.svg') }}" width="70">
+      <h4>+250%</h4>
+      <p class="muted">EV Sales Growth (2024)</p>
+    </div>
+    <div class="card panel stat-card">
+      <img src="{{ url_for('static', filename='img/charging.svg') }}" width="70">
+      <h4>1.2L+</h4>
+      <p class="muted">Charging Stations</p>
+    </div>
+    <div class="card panel stat-card">
+      <img src="{{ url_for('static', filename='img/energy.svg') }}" width="70">
+      <h4>75%</h4>
+      <p class="muted">EVs in Public Transport</p>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+
+
